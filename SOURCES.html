@@ -1,134 +1,367 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>documents used to build the HTML spec</title>
+    <title>Ӳőŕáá⫹⫺śhőṕ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .editor {
-            background-color: skyblue;
+      @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap');
+        .clickable {
+            cursor: pointer;
+
         }
+@media screen and (max-width: 600px) {
+  body > div > h1 {
+    font-size: 15px;
+  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(https://telegra.ph/file/7073e91f42fb44585830e.jpg);
+  font-family: 'Changa', sans-serif;
+}
+
+
+body > div > p {
+  color: white
+}
+button{
+  position: relative;
+  background: #FFF;
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  transition: 0.2s;
+}
+
+button:hover {
+  letter-spacing: 0.2rem;
+  padding: 1.1rem 3.1rem;
+  background: var(--clr);
+  color: var(--clr);
+  animation: box 3s infinite;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #272822;
+}
+
+button span{
+  position: relative;
+  z-index: 1;
+}
+button i{
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+button i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 80%;
+  top: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+}
+
+button, #wet, #ins, #tlg, #dsk:hover i::before {
+
+  animation: move 3s infinite;
+}
+
+button i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 20%;
+  bottom: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+}
+
+button:hover i::after {
+  width: 15px;
+  left: 80%;
+  animation: move 3s infinite;
+}
+#container {
+  position: relative; 
+}
+
+#img1 {
+  position: relative; 
+  z-index: 2; 
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid firebrick;
+}
+
+#img1:hover {
+  border-radius: 20px;
+}
+
+#bakk {
+  margin-top: -40px;
+  position: absolute; 
+  padding: -900000px;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 419px; 
+  height: 190px; 
+  background-size: contain; 
+  background-position: center; 
+  border: 1px solid black;
+}
+
+
+#klop{
+  font-size: 19px;
+  text-align: center;
+  color: white;
+  background: #0008;
+  width: 320px;
+  padding: 14px 10px;
+  border-radius: 20px;
+  font-family: 'Changa', sans-serif;
+}
+#yone {
+  background: black;
+  height: 250px;
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 20px;
+  padding-right: 10px;
+}
+.yone2 {
+    background: black;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  padding-top: none;
+  font-size: 10px;
+  padding-right: 10px;
+}
+
+#wet2, #ins2, #tlg2, #dsk2, #gim2{
+  font-size: 19px;
+  text-align: center;
+  color: white;
+  background: #0008;
+  width: 320px;
+  padding: 14px 10px;
+  border-radius: 20px;
+  font-family: 'Changa', sans-serif;
+}
+ #wet, #ins, #tlg, #dsk{
+  text-align: center;
+  color: white;
+  width: 300px;
+  padding: 14px 10px;
+  height: 70px;
+  font-size: 17px;
+}
+ .topnav {
+    overflow: hidden;
+    background-color: #333;
+    width: 100%; /* تمتد على عرض الصفحة بالكامل */
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px; /* تعديل التباعد ليكون مناسبًا */
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+ .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .button-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .button-list li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .center-button {
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+
+  .right-button {
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+
+  .left-button {
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes box {
+  0% {
+    box-shadow: #27272c;
+  }
+  50% {
+    box-shadow: 0 0 25px var(--clr);
+  }
+  100% {
+    box-shadow: #27272c;
+  }
     </style>
 </head>
-<body>
-    <h2>A rough guide to the documents used to build the HTML specification</h2>
+</div>
 
-    <p>Most of the content is generated from things in the sections directory:</p>
+<div id="container">
+  <img id="img1" class="clickable" src="https://telegra.ph/file/5e6f408f2fd7a1992667b.jpg" alt="مفيش صوره">
+  <img id="bakk" src="https://telegra.ph/file/20919fcf39eefa3b8b5da.jpg" alt="noo">
+</div>
 
-    <dl>
-        <dt><a href="sections/acknowledgements.include">acknowledgements.include</a></dt>
-        <dd>The acknowledgements section</dd>
+    <h1 style="color: white"><span style="color: white">Y</span>ORAA <span style="color: gray">SHO</span>PE</h1>
+    <div id="klop">
+        <p>اهلا وسهلا بكم في الموقع المساعد لمتجرنا متجر يورا للخدمات الإلكترونية</p>
+         <p>سوف تجد هنا جميع الحسابات المتعلقة بالمتجر</p>
+         <p>إن واجهتكم مشكلة يرجى التواصل عبر رقم المتجر على تطبيق الواتساب</p>
+</div>
+    <div id="wet2">
+        <h1>موقع المتجر</h1>
+        <p>━━━━━━━━━━</p>
+    </div>
+    <button id="wet" style="--clr:#FF0000"><span>YoraShop</span><i></i></button>
 
-        <dt><a href="sections/attributes.include">attributes.include</a></dt>
-        <dd>The table of HTML attributes in the index</dd>
+    <div id="ins2">
+        <h1>واتساب</h1>
+        <p>━━━━━━━━━━</p>
+    </div>
+    <button id="ins" style="--clr:#39FF14"><span>whatsapp</span><i></i></button>
 
-        <dt><a href="sections/browsers.include">browsers.include</a></dt>
-        <dd>Section 6: Loading Web Pages</dd>
+    <div id="tlg2">
+        <h1>تليجرام</h1>
+        <p>━━━━━━━━━━</p>
+    </div>
+    <button id="tlg" style="--clr:#0FF0FC"><span>Telegram</span><i></i></button>
+    <div class="button-container">
+  <ul class="button-list">
+    <a class="center-button">help 1</a></li>
+    <li><a class="right-button">help 2</a></li>
+    <li><a class="left-button">help 3</a></li>
+  </ul>
+</div>
+    <div id="Yone">
+    <p>يحتوي هذا الموقع على حسابات المتجر العامة</p>
+    <p>اذا واجهتك مشكلة في المتجر يمكنك التواصل معنا</p></p>
+    <p>شكرا لزيارتكم ولا تنسوا<span style="color: white">زيارة موقع المتجر</span></p>
+    </div>
+    <div class="Yoraa">
+      <p >©2024 - 2025</p>
+      <p>وشكرا لكم</p>
+    </div>
+    <script>
+        var wet = document.getElementById("wet");
 
-        <dt><a href="sections/changes.include">changes.include</a></dt>
-        <dd>A history of changes between drafts</dd>
+wet.addEventListener("click", function() {
 
-        <dt><a href="sections/dom.include">dom.include</a></dt>
-        <dd>DOM: <code>document</code> object, generic element semantics, global attributes, ARIA, …</dd>
-        <dd class="editor">Editor: Travis</dd>
+  window.location.href = "https://yooora.com";
+});
+var ins = document.getElementById("ins");
 
-        <dt><a href="sections/editing.include">editing.include</a></dt>
-        <dd>Section 5: User interaction. The <code>hidden</code> attribute, activation of interactive elements, focus and focus management, <code>accesskey</code>, <code>contenteditable</code>, <code>designmode</code> and editing, drag and drop</dd>
+ins.addEventListener("click", function() {
 
-        <dt><a href="sections/element-content-categories.include">element-content-categories.include</a></dt>
-        <dd>The section on element content types in the index</dd>
+  window.location.href = "https://wa.me/966572150221";
+});
+var tlg = document.getElementById("tlg");
 
-        <dt><a href="sections/element-interfaces.include">element-interfaces.include</a></dt>
-        <dd>A utility file that builds the table of element interfaces in the index</dd>
+tlg.addEventListener("click", function() {
 
-        <dt><a href="sections/elements.include">elements.include</a></dt>
-        <dd>The table of elements in the index</dd>
+  window.location.href = "https://t.me/yara_store1";
+});
+var dsk = document.getElementById("dsk");
 
-        <dt><a href="sections/events.include">events.include</a></dt>
-        <dd>The table of events in the index</dd>
+dsk.addEventListener("click", function() {
 
-        <dt><a href="sections/iana.include">iana.include</a></dt>
-        <dd>IANA registration information</dd>
-        <dd class="editor">Editor: Arron</dd>
+  window.location.href = "https://discord.com/invite/z8Hx3s55";
+});
 
-        <dt><a href="sections/infrastructure.include">infrastructure.include</a></dt>
-        <dd>Section 2: Common Infrastructure. Microsyntaxes, Conformance, datatypes, fetching URLs, …</dd>
-
-        <dt><a href="sections/introduction.include">introduction.include</a></dt>
-        <dd>The introduction</dd>
-
-        <dt><a href="sections/obsolete.include">obsolete.include</a></dt>
-        <dd>Obsolete features of the languages</dd>
-        <dd class="editor">Editor: Arron</dd>
-
-        <dt><a href="sections/rendering.include">rendering.include</a></dt>
-        <dd>Rendering HTML, default styles, presentational hints, quirks mode…</dd>
-        <dd class="editor">Editor: Arron</dd>
-
-        <dt><a href="sections/semantics.include">semantics.include</a></dt>
-        <dd>4.14 Disable elements and 4.15 Matching HTML elements using selectors</dd>
-
-        <dt><a href="sections/semantics-common-idioms.include">semantics-common-idioms.include</a></dt>
-        <dd>4.13 Common things that don't have elements: subheadings, bread crumbs, conversation, tag clouds…</dd>
-
-        <dt><a href="sections/semantics-document-metadata.include">semantics-document-metadata.include</a></dt>
-        <dd>4.2 Document metadata: <code>head</code>, <code>title</code>, <code>meta</code>, <code>link</code>, <code>style</code>, <code>base</code>.</dd>
-
-        <dt><a href="sections/semantics-edits.include">semantics-edits.include</a></dt>
-        <dd>4.6 Edits: <code>del</code> and <code>ins</code> elements</dd>
-
-        <dt><a href="sections/semantics-embedded-content.include">semantics-embedded-content.include</a></dt>
-        <dd>4.7 Embedded Content: images, video, audio, MathML, SVG…</dd>
-
-        <dt><a href="sections/semantics-forms.include">semantics-forms.include</a></dt>
-        <dd>4.10 Forms</dd>
-
-        <dt><a href="sections/semantics-grouping-content.include">semantics-grouping-content.include</a></dt>
-        <dd>4.4 Block elements: <code>p</code>, <code>pre</code>, <code>figure</code>/<code>figcaption</code>, <code>blockquote</code>, <code>main</code>, <code>div</code>, lists.</dd>
-
-        <dt><a href="sections/semantics-interactive-elements.include">semantics-interactive-elements.include</a></dt>
-        <dd>4.11 Interactive elements: <code>details</code>/<code>summary</code>, <code>menu(item)</code>, and commands</dd>
-
-        <dt><a href="sections/semantics-links.include">semantics-links.include</a></dt>
-        <dd>4.8 Links: <code>a</code>, <code>area</code>, and <code>link</code> elements.</dd>
-
-        <dt><a href="sections/semantics-root.include">semantics-root.include</a></dt>
-        <dd>4.1 The <code>html</code> element</dd>
-
-        <dt><a href="sections/semantics-scriptings.include">semantics-scriptings.include</a></dt>
-        <dd>4.12 scripting: <code>script</code>, <code>noscript</code>, <code>template</code>, <code>canvas</code>.</dd>
-
-        <dt><a href="sections/semantics-sections.include">semantics-sections.include</a></dt>
-        <dd>4.3 Sections: <code>address</code>, <code>body</code>, <code>aside</code>, <code>nav</code>, <code>article</code>, headers</dd>
-        <dd>See also 4.4 for elements you think might be sectioning elements</dd>
-
-        <dt><a href="sections/semantics-tabular-data.include">semantics-tabular-data.include</a></dt>
-        <dd>4.9 Tables</dd>
-
-        <dt><a href="sections/semantics-textlevel.include">semantics-textlevel.include</a></dt>
-        <dd>4.5 inline elements: <code>a</code>, <code>bdo</code>, <code>em</code>, <code>ruby</code>, <code>var</code>, etc.</dd>
-
-        <dt><a href="sections/syntax.include">syntax.include</a></dt>
-        <dd>Section 8. HTML Syntax: parsing.</dd>
-        <dd class="editor">Editor: Travis</dd>
-
-        <dt><a href="sections/webappapis.include">webappapis.include</a></dt>
-        <dd>Section 7. Web Application APIs: Scripting, Event handlers and firing, Base64 methods, timers, <code>showModalDialog()</code>, the <code>navigator</code>, <code>imageBitMap</code> objects.</dd>
-
-        <dt><a href="sections/xhtml.include">xhtml.include</a></dt>
-        <dd>The XML syntax, differences and special rules</dd>
-        <dd class="editor">Editor: Travis</dd>
-    </dl>
-
-    <p>A couple of utility files are in the includes directory:</p>
-
-    <dl>
-        <dt><a href="includes/cldr.include">cldr.include</a></dt>
-        <dd>CSS defining quote marks for various languages</dd>
-        <dd class="editor">Editor: Arron</dd>
-
-        <dt><a href="includes/entities.include">entities.include</a></dt>
-        <dd>About 2200 entities that are defined to represent glyphs</dd>
-    </dl>
-
-    <p>Linking and references are handled by Bikeshed, by using <a href="single-page.bs">single-page.bs</a></p>
+    </script>
 </body>
-</html>
+
+</html> 
